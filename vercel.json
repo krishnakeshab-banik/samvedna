@@ -6,12 +6,6 @@
       "installCommand": "cd ../.. && pnpm install",
       "buildCommand": "cd ../.. && pnpm --filter @samvedna/shared-types build && pnpm --filter @samvedna/web build"
     },
-    "api": {
-      "root": "apps/api",
-      "framework": "express",
-      "installCommand": "cd ../.. && pnpm install",
-      "buildCommand": "cd ../.. && pnpm --filter @samvedna/shared-types build && pnpm --filter @samvedna/api build"
-    },
     "ml-service": {
       "root": "services/ml-service",
       "framework": "fastapi",
@@ -22,10 +16,6 @@
     {
       "source": "/api/ml-service(/.*)?",
       "destination": { "type": "service", "service": "ml-service" }
-    },
-    {
-      "source": "/svc/api(/.*)?",
-      "destination": { "type": "service", "service": "api" }
     },
     {
       "source": "/(.*)",
